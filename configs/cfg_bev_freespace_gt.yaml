@@ -1,0 +1,12 @@
+data_source:
+  name: nuscenes
+  path: ./data/nuscenes_mini
+  version: v1.0-mini
+
+data_representation:
+  bev:
+    long_range:   [0, 40]   # meters forward/backward
+    lat_range:    [-10, 10] # meters left/right
+    resolution:   0.1      # meters per pixel
+    visualize: True  # whether to visualize BEV outputs during generation
+output_dir: '{REPO}/freespace-detector/local/{CONFIG_FILE_STEM}'

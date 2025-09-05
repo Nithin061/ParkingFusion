@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "your-project"
+version = "0.1.0"
+description = "ADAS/vision utilities"
+requires-python = ">=3.10,<3.13"
+
+
+# Runtime deps (pinned)
+dependencies = [
+  "cachetools==6.1.0",
+  "certifi==2025.7.14",
+  "charset-normalizer==3.4.2",
+  "descartes==1.1.0",
+  "fire==0.7.0",
+  "fsspec==2025.7.0",
+  "gitpython==3.1.45",
+  "huggingface-hub==0.34.1",
+  "imageio==2.37.0",
+  "joblib==1.5.1",
+  "networkx==3.4.2",
+  "numpy==1.26.0",
+  "nuscenes-devkit==1.1.11",  # use 'nuscenes-devkit[map]==1.1.11' if you need map extras
+  "opencv-python==4.8.1.78",
+  "packaging==25.0",
+  "pillow==11.3.0",
+  "psutil==7.0.0",
+  "pycocotools==2.0.10",
+  "pyquaternion==0.9.9",
+  "pyyaml==6.0.2",
+  "requests==2.32.4",
+  "safetensors==0.5.3",
+  "scikit-image==0.25.2",
+  "scikit-learn==1.7.1",
+  "scipy==1.14.1",
+  "shapely==1.8.5.post1",
+  "sympy==1.14.0",
+  "termcolor==3.1.0",
+  "timm==1.0.19",
+  "torch==2.7.1",
+  "torchvision==0.22.1",
+  "tqdm==4.67.1",
+  "matplotlib==3.5.3",
+  "pywin32==311; sys_platform == 'win32'"
+]
+
+[project.optional-dependencies]
+dev = [
+  # Jupyter / REPL
+  "ipykernel==6.30.0",
+  "ipython==8.37.0",
+  "jupyter-client==8.6.3",
+  "jupyter-core==5.8.1",
+  "matplotlib-inline==0.1.7",
+  "nest-asyncio==1.6.0",
+  "parso==0.8.4",
+  "prompt-toolkit==3.0.51",
+  "pygments==2.19.2",
+  "pyzmq==27.0.0",
+  "tornado==6.5.1",
+  "traitlets==5.14.3",
+  "wcwidth==0.2.13",
+
+  # Debug/stack helpers
+  "asttokens==3.0.0",
+  "debugpy==1.8.15",
+  "comm==0.2.2",
+  "executing==2.2.0",
+  "stack-data==0.6.3",
+  "jedi==0.19.2",
+
+  # Code style
+  "isort==6.0.1"
+]
+
+# tell setuptools to build an "empty" wheel so it doesn't try to discover packages
+[tool.setuptools]
+packages = []
+include-package-data = false

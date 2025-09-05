@@ -1,0 +1,85 @@
+{
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: BEV Freespace Ground Truth Creator.",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/gt_creator/bev/bev_freespace_gt.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "args": [
+                "--config",
+                "${workspaceFolder}/configs/cfg_bev_freespace_gt.yaml"
+            ],
+        },
+        {
+            "name": "Python: Foot Print Segmentor Gt.",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/gt_creator/bev/bev_foot_print_segmentation_gt.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "args": [
+                "--config",
+                "${workspaceFolder}/configs/cfg_bev_foot_print_seg_gt.yaml"
+            ],
+        },
+        {
+            "name": "Python: Radar BEV Freespace Representation.",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/data_representation/bev/test_radar.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--config",
+                "${workspaceFolder}/configs/cfg_bev_representation_pipeline.yaml"
+            ],
+        },
+        {
+            "name": "Python: CAM BEV IPM Representation.",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/data_representation/bev/test_camera.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--config",
+                "${workspaceFolder}/configs/cfg_bev_representation_pipeline.yaml"
+            ],
+        },
+        {
+            "name": "Python: BEV Data Generator.",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/data_representation/bev/bev_generator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--config",
+                "${workspaceFolder}/configs/cfg_bev_representation_pipeline.yaml"
+            ],
+        },
+        {
+            "name": "Python: Train FreeSpace Seg.",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/train_free_space.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--config",
+                "${workspaceFolder}/configs/train_config.yaml"
+            ],
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+data_source:
+  name: nuscenes
+  path: ./data/nuscenes_mini
+  version: v1.0-mini
+
+data_representation:
+  bev:
+    long_range:   [0, 40]   # meters forward/backward
+    lat_range:    [-10, 10] # meters left/right
+    resolution:   0.1      # meters per pixel
+    sensors:
+      camera: "camera_ipm_bev"             # BEV representation for camera
+      radar:  "radar_points_occupancy_bev" # BEV representation for radar
+    visualize: True  # whether to visualize BEV outputs during generation
+
+
+# where to write final BEV outputs
+output_dir: '{REPO}/freespace-detector/local/{CONFIG_FILE_STEM}'

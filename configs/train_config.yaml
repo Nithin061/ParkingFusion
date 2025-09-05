@@ -1,0 +1,8 @@
+data_path: ./local/cfg_bev_representation_pipeline
+gt_path: ./local/cfg_bev_freespace_gt
+model: deeplabv3        # or: fcn
+batch_size: 8
+lr: 1e-3
+epochs: 30
+val_split: 0.2
+output_dir: '{REPO}/freespace-detector/local/{CONFIG_FILE_STEM}'
